@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+<title>Which ATL Rapper Are You?</title>
+<style>
+body {
+background-color: lightblue;
+font-family: Helvetica;
+background-image: url('guccirobe.jpg');
+}
+
+#main {
+width: 60%;
+border: 1px gray solid;
+margin: auto;
+padding: 15px;
+background-color: #6B465C;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background-image: url('guccimane.jpg');
+
+
+}
+
+
+h1 {
+    color: #01BEB1;
+    text-align: center;
+    
+</style>
+</head>
+<body>
+<div id="main">
+<div id="header"><h1>What Atlanta Rapper Are You?</h1></div>
+<table>
+<form  id="form1" action=" "/>
+<tr><td>
+<p>What kind of phone do you have?</p></td><td>
+<select id="thedropdown">
+  <option value="1">iPhone</option>
+  <option value="2">Any Andriod</option>
+  <option value="3">Flip-Phone</option>
+</select>
+</td></tr>
+
+<tr><td>
+<p>Body Count</p></td><td>
+<select id="thedropdown1">
+  <option value="1">you're talking about shawties right?</option>
+  <option value="2">none, my case was dropped</option>
+  <option value="3">plead the 5th</option>
+</select>
+</td></tr>
+
+<tr><td>
+<p>Your friend gets wet-up.</p></td><td>
+<select id="thedropdown2">
+  <option value="0">throw him a towel</option>
+  <option value="2">take him to the hospital</option>
+  <option value="3">call some shooters </option>
+</select>
+</td></tr>
+
+<tr><td>
+<p>Pick a drink</p></td><td>
+<select id="thedropdown3">
+  <option value="0">Sprite</option>
+  <option value="2">Craft Beer</option>
+  <option value="3">Muddy</option>
+</select>
+</td></tr>
+
+<tr><td>
+<p>Baby Mama?</p></td><td>
+<select id="thedropdown4">
+  <option value="0">None!</option>
+  <option value="2">Just one</option>
+  <option value="3">Two or more</option>
+</select>
+</td></tr>
+
+<tr><td>
+<p>Pick one</p></td><td>
+<select id="thedropdown5">
+  <option value="0">Dirty Sprite</option>
+  <option value="2">Loud</option>
+  <option value="3">Nature</option>
+</select>
+</td></tr>
+
+<tr><td>
+<p>What significance does the Bando have to you?</p></td><td>
+<input type="radio" name="activity" id="party" value="1" />What is that? It's an instrument right?</td><td>
+<input type="radio" name="activity" id="rock" value="2" />I visit once a week</td><td>
+<input type="radio" name="activity" id="beer" value="3" />That's where I eat, sleep, and finesse.</td></tr>
+
+
+<tr><td>
+<p>It's Monday night here, what does this mean to you?</p><p><img src="magiccity1.jpg" width="auto" height="350px"></p></td><td>
+<input type="radio" name="opinion" id="terrible" value="1" />I'm on psychedelics, it's cool and all, but i'm hanging out with friends looking at the stars. </td><td>
+<input type="radio" name="opinion" id="good" value="2" />I'm here to get stupid and hopefully not wet anyone up.</td><td>
+<input type="radio" name="opinion" id="goat" value="3" />No limit on what I can spend, but I'm a business man. A smart one. Droppings bands though... </td>
+</tr>
+
+<tr>
+<td>
+<p>What do you think of this man?</p><p><img src="coachk.jpg" width="auto" height="350px"></p></td>
+<td><input type="radio" name="whodat" id="whodatt" value="51" />Who is that?</td>
+<td><input type="radio" name="whodat" id="coach" value="3" />Coach K</td>
+<td><input type="radio" name="whodat" id="defjam" value="51" />Def Jam Records producer (Slim)</td>
+</tr>
+
+<tr>
+<td>
+<p>You have to pick one of these guys to make a banger.</p></td>
+<td><input type="radio" name="banger" id="metro" value="1" /><img src="metroboomin.jpg" width="auto" height="100px"></td>
+
+<td><input type="radio" name="banger" id="london" value="2" /><img src="londonondatrack.jpg" width="auto" height="100px"></td>
+
+<td><input type="radio" name="banger" id="mikewill" value="3" /><img src="zaytoven.jpg" width="auto" height="100px">
+
+</td>
+</tr>
+
+
+<tr><td>
+<br />
+<input type="submit" value="Submit">
+</td></tr>
+</form>
+</table>
+<p id="answer"></p>
+<p id="answer2"></p>
+</div>
+<script>
+   
+   activityvar = ['party', 'rock', 'beer'];
+   opinionvar = ['terrible', 'good', 'goat'];
+   whodatvar = ['whodatt', 'coach', 'defjam']; 
+   bangervar= ['metro', 'london', 'mikewill']; 
+    
+	   document.getElementById("form1").onsubmit=function() {
+	   //dropdown is actually easier, because you just grab the value, don't need if or for.
+	    age=document.getElementById("thedropdown").value;   
+	    bodies=document.getElementById("thedropdown1").value; 
+	    wet=document.getElementById("thedropdown2").value;   
+	    drink=document.getElementById("thedropdown3").value;   
+	     mama=document.getElementById("thedropdown4").value;   
+	    drugs=document.getElementById("thedropdown5").value;   
+	     
+	   
+	   for(i=0; i<activityvar.length; i++) {
+	   if (document.getElementById(activityvar[i]).checked) {
+	   activity = document.getElementById(activityvar[i]).value 
+	   }
+	   }//end for
+	   
+	  
+	   for(i=0; i<opinionvar.length; i++) {
+	   if (document.getElementById(opinionvar[i]).checked) {
+	   opinion = document.getElementById(opinionvar[i]).value 
+	   }
+	   }//end for
+	   
+	    for(i=0; i<whodatvar.length; i++) {
+	   if (document.getElementById(whodatvar[i]).checked) {
+	   whodat = document.getElementById(whodatvar[i]).value 
+	   }
+	   }//end for
+	   
+	    for(i=0; i<bangervar.length; i++) {
+	   if (document.getElementById(bangervar[i]).checked) {
+	   banger = document.getElementById(bangervar[i]).value 
+	   }
+	   }//end for
+	   
+	   
+	   total = parseInt(age) + parseInt(bodies) + parseInt(activity) + parseInt(opinion) + parseInt(whodat) + parseInt(banger) + parseInt(wet) + parseInt(drink) + parseInt(mama) + parseInt(drugs);
+	   
+	   //document.getElementById("answer").innerHTML = total;
+	   
+	   if(total >=7 && total <= 13) {
+document.getElementById("answer2").innerHTML = "<p>You are Childish Gambino. You're young and you probably want to stay away from Atlanta's rap scene because you see yourself being a professional in another feed.</p><img src='childishgambino.jpg' />" + "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/53428576&amp;color=6b465c&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+
+ if(total >=14 && total <= 15) {
+document.getElementById("answer2").innerHTML = " <p>Truuu! You are 2 Chainz. Two pinkies, 50 karats, bring the bunnies, take em Easter Huntin. Truuuuuu!</p><img src='2chainz.jpg' />" + "<iframe width='100%' height='450' scrolling='no' frameborder='no'src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/134096509&amp;color=6b465c&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+
+   if(total >=16 && total <= 17) {
+document.getElementById("answer2").innerHTML = "<p>You are IloveMakonnen! Keep spreading that positivity to the youth. You Red Dragon.</p><p><img src='ilovemakonnen.jpg' /></p>" + "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/72468719&amp;color=6b465c&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+
+ if(total >=18 && total <= 19) {
+document.getElementById("answer2").innerHTML = "<p>You are Father! Stay smooth with it and finesse the Versace.</p><img src='father.jpg' />" + "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/49198579&amp;color=01beb1&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+
+ if(total >=20 && total <= 20) {
+document.getElementById("answer2").innerHTML = "<p>You are Future! You are a giant in your city. Stay blessed and buy your soda in bulk.</p><img src='future.jpg' />" + "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/71967911&amp;color=6b465c&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+
+ if(total >=21 && total <= 23) {
+document.getElementById("answer2").innerHTML = "<p>You are Young Dolph. Preach! You don't trust these .....because they're shady. Stay up.</p><img src='youngdolph.jpg' />" + "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/129370559&amp;color=6b465c&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+
+ if(total >=24 && total <= 25) {
+document.getElementById("answer2").innerHTML = "<p>You are Young Thug! Iddi ma niidi ta tiddy sa niddi Thugga Thugga.</p><img src='youngthug.jpg' ?>" + "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/145558205&amp;color=6b465c&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+
+ if(total >=26 && total <= 30) {
+document.getElementById("answer2").innerHTML = "<p>You are PeeWeeLongway you savage!</p><img src='peewee.jpg' />" + "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/110939121&amp;color=6b465c&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+	
+	   
+	if(total > 50) {
+document.getElementById("answer2").innerHTML = "<p>YOU ARE NOT A RAPPER. LEARN WHO COACH K IS FIRST. Here's some music from Post Malone from Dallas though.</p><img src='cornball.jpg' />" + "<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/104920643&amp;color=6b465c&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+}
+	   
+	   return false; // required to not refresh the page; just leave this here
+	   }// end the submit function
+	
+   
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
